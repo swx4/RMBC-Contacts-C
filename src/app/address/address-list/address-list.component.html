@@ -1,1 +1,26 @@
 <p>address-list works!</p>
+
+<table>
+    <thead>
+      <th>Id</th>
+      <th>Street</th>
+      <th>Street2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>PostalCode</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let address of addresses">
+  
+        <td>{{address.id}}</td>
+        <td>{{address.street}}</td>
+        <td>{{address.street2}}</td>
+        <td>{{address.city}}</td>
+        <td>{{address.state}}</td>
+        <td>{{address.postalCode}}</td>
+        <td>
+            <button (click)="delete(address.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
